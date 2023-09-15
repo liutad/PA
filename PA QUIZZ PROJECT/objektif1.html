@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DEMOKRASI DAN PILIHAN RAYA</title>
+    <style>
+        /* Apply a black background color to the body element */
+        body {
+            background-color: black;
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Specify a font for text */
+        }
+
+        /* Style for the question container */
+        .question {
+            background-color: #333; /* Dark gray background for question container */
+            padding: 20px; /* Add padding for better spacing */
+            margin-bottom: 10px; /* Add margin between questions */
+        }
+
+        /* Style for answer choices */
+        .question p {
+            margin: 5px 0; /* Adjust spacing between answer choices */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Style for selected answer (optional) */
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        .correct-choice {
+            background-color: whitesmoke;
+        }
+
+        .wrong-choice {
+            background-color: whitesmoke;
+        }
+    </style>
+    <script>
+        function checkAnswer(questionId, selectedAnswer) {
+            // Define the correct answers for each question
+            var correctAnswers = {
+                "question1": "C",
+                "question2": "C",
+                "question3": "C",
+                "question4": "B",
+                "question5": "C",
+                "question6": "B",
+                "question7": "C",
+                "question8": "A",
+                "question9": "A",
+                "question10": "A",
+                "question11": "A",
+                "question12": "C",
+                "question13": "C",
+                "question14": "B",
+                "question15": "C",
+                "question16": "B",
+                "question17": "A",
+                "question18": "B",
+                "question19": "A",
+                "question20": "A",
+                
+            };
+
+            // Get the correct answer for the current question
+            var correctAnswer = correctAnswers[questionId];
+            const resultElement = document.getElementById(`result${questionId}`); // Use questionId instead of questionNumber
+            const selectedChoice = document.getElementById(selectedAnswer);
+
+            // Check if the selected answer is correct
+            if (selectedAnswer === correctAnswer) {
+                resultElement.textContent = 'Correct!';
+                resultElement.className = 'correct';
+                selectedChoice.className = 'correct-choice'; // Change the color of the selected choice
+            } else {
+                resultElement.textContent = 'Wrong!'; // Change to 'Wrong!'
+                resultElement.className = 'wrong'; // Change to 'wrong'
+                selectedChoice.className = 'wrong-choice'; // Change the color of the selected choice
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>CHOOSE THE CORRECT ANSWERS,U CAN CLICK THE CHOICE !(A,B,C,D)</h1>
+    <!-- Question 1 -->
+    <div class="question" id="question1">
+        <p>1--Yang manakah fungsi Suruhanjaya Pilihan Raya? (STPM2014)</p>
+        <p>I. Menentukan calon yang bertanding dalam pilihan raya</p>
+        <p>II. Memastikan keselamatan pengundi semasa pilihan raya</p>
+        <p>III. Menjalankan urusan semakan daftar pemilih pilihan raya</p>
+        <p>IV. Membuat persempadanan semula bahagian-bahagian pilihan raya</p>
+        <p onclick="checkAnswer('question1', 'A')">A I dan III</p>
+        <p onclick="checkAnswer('question1', 'B')">B I dan IV</p>
+        <p onclick="checkAnswer('question1', 'C')">C III dan IV</p>
+        <p onclick="checkAnswer('question1', 'D')">D II dan III</p>
+        <p id="resultquestion1"></p> <!-- Added result element for question 1 -->
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question" id="question2">
+        <p>2--Yang manakah sebab-sebab keputusan pilihan raya boleh dicabar di mahkamah?</p>
+           <p>I. rasuah</p>
+           <p>II. peras ugut atau sebarang tingkah laku yang boleh menjejaskan pilihan raya</p>
+           <p>III. ketidakpatuhan peruntukan undang- undang dan pilihan raya</p>
+           <p>IV. calon gagal menghantar penyata pilihan raya dalam tempoh yang ditetapkan</p>
+        <p onclick="checkAnswer('question2', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question2', 'B')">B II dan IV</p>
+        <p onclick="checkAnswer('question2', 'C')">C I,II dan III</p>
+        <p onclick="checkAnswer('question2', 'D')">D Semua di atas</p>
+        <p id="resultquestion2"></p> <!-- Added result element for question 2 -->
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" id="question3">
+        <p>3--Yang Dipertua Dewan Rakyat telah menghantar notis kekosongan kerusi Dewan Rakyat bagi <br> kawasan Parlimen X kepada Suruhanjaya Pilihan Raya. 
+            Tindakan ini diambil kerana wakil rakyat tersebut</p>
+           <p onclick="checkAnswer('question3', 'A')">A I. dipilih sebagai Ahli Dewan Undangan Negeri dalam satu pilihan raya kecil</p>
+           <p onclick="checkAnswer('question3', 'B')">B II. dikenakan tindakan disiplin oleh Jawatankuasa Hak dan Kebebasan Dewan</p>
+           <p onclick="checkAnswer('question3', 'C')">C III. dibuktikan bersalah dalam prosiding yang berhubung dengan salah laku pilihan raya</p>
+           <p onclick="checkAnswer('question3', 'D')">D IV. tidak menghadiri sidang dalam tempoh 3 bulan selepas sidang pertama Dewan Rakyat</p>
+        <p id="resultquestion3"></p> <!-- Added result element for question 3 -->
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question" id="question4">
+        <p>4--Yang manakah fungsi Suruhanjaya Pilihan Raya? (STPM2014)</p>
+        <p>I. Menentukan calon yang bertanding dalam pilihan raya</p>
+        <p>II. Memastikan keselamatan pengundi semasa pilihan raya</p>
+        <p>III. Menjalankan urusan semakan daftar pemilih pilihan raya</p>
+        <p>IV. Membuat persempadanan semula bahagian-bahagian pilihan raya</p>
+        <p onclick="checkAnswer('question4', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question4', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question4', 'C')">C I,II dan III</p>
+        <p onclick="checkAnswer('question4', 'D')">D Semua di atas</p>
+        <p id="resultquestion4"></p> <!-- Added result element for question 4 -->
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question" id="question5">
+        <p>5--Pilihan raya kecil perlu diadakan kerana (STPM2018)</p>
+           <p onclick="checkAnswer('question5', 'A')">A I. Rombakan kabinet </p>
+           <p onclick="checkAnswer('question5', 'B')">B II. Kematian Setiausaha Dewan Negara</p>
+           <p onclick="checkAnswer('question5', 'C')">C III. Kemuflisan Ahli Dewan Undangan Negeri</p>
+           <p onclick="checkAnswer('question5', 'D')">D IV. Peletakan jawatan Setiausaha Dewan Rakyat</p>
+        <p id="resultquestion5"></p> <!-- Added result element for question 5 -->
+    </div>
+
+    <div class="question" id="question6">
+        <p>6--Yang manakah benar tentang anggota Suruhanjaya Pilihan Raya? (STPM2016)</p>
+           <p onclick="checkAnswer('question6', 'A')">A I. Lantikannya oleh Perdana Menteri</p>
+           <p onclick="checkAnswer('question6', 'B')">B II. Saraannya di bawah peruntukan Parlimen</p>
+           <p onclick="checkAnswer('question6', 'C')">C III. Pemecatannya dibuat oleh Jemaah Menteri</p>
+           <p onclick="checkAnswer('question6', 'D')">D IV. Terma jawatannya ditentukan oleh Ketua Setiausaha Negara</p>
+        <p id="resultquestion6"></p> <!-- Added result element for question 6 -->
+    </div>
+
+    <div class="question" id="question7">
+        <p>7--Yang manakah sebab seseorang calon yang kalah dalam pilihan raya membuat petisyen pilihan raya? (STPM2017)</p>
+           <p onclick="checkAnswer('question7', 'A')">A I. Calon yang menang tidak berdaftar sebagai pengundi</p>
+           <p onclick="checkAnswer('question7', 'B')">B II. Calon yang menang mempunyai jentera pilihan raya yang ramai</p>
+           <p onclick="checkAnswer('question7', 'C')">C III. Calon yang menang tidak patuh terhadap peruntukan undang-undang pilihan raya</p>
+           <p onclick="checkAnswer('question7', 'D')">D IV. Calon yang menang gagal menghantar penyata piihan raya dalam tempoh yang ditetapkan</p>
+        <p id="resultquestion7"></p> <!-- Added result element for question 7 -->
+    </div>
+
+    <div class="question" id="question8">
+        <p>8--Yang manakah fungsi Suruhanjaya Pilihan Raya? (STPM2017)</p>
+           <p onclick="checkAnswer('question8', 'A')">A I. Membuat kajian dan pesempadan kawasan Pilihan Raya </p>
+           <p onclick="checkAnswer('question8', 'B')">B II. Mengawal keselamatan dalam tempoh pilihan raya</p>
+           <p onclick="checkAnswer('question8', 'C')">C III. Meluluskan persempadanan kawasan pilihan raya</p>
+           <p onclick="checkAnswer('question8', 'D')">D IV. Mengadili petisyen pilihan raya</p>
+        <p id="resultquestion8"></p> <!-- Added result element for question 8 -->
+    </div>
+
+    <div class="question" id="question9">
+        <p>9--Yang manakah menggambarkan sistem pemilihan kerajaan di Malaysia? (STPM2018)</p>
+        <p>I. Perlembagaan Persekutuan menentukan sistem pemilihan kerajaan.</p>
+        <p>II. Ketua Negara menetapkan tarikh pemilihan kerajaan.</p>
+        <p>III. Kerajaan dipilih oleh rakyat lima tahun sekali.</p>
+        <p>IV. Perdana Menteri dipilih melalui pilihan raya.</p>
+        <p onclick="checkAnswer('question9', 'A')">A I dan III</p>
+        <p onclick="checkAnswer('question9', 'B')">B II dan IV</p>
+        <p onclick="checkAnswer('question9', 'C')">C II dan III</p>
+        <p onclick="checkAnswer('question9', 'D')">D I dan IV</p>
+        <p id="resultquestion9"></p> <!-- Added result element for question 9 -->
+    </div>
+
+    <div class="question" id="question10">
+        <p>10--Yang manakah pengundi yang berhak untuk mengundi sebagai pengundi pos? (STPM2015)</p>
+           <p onclick="checkAnswer('question10', 'A')">A I. Pegawai pilihanraya yang menjalankan tugas pada hari mengundi</p>
+           <p onclick="checkAnswer('question10', 'B')">B II. Pegawai perkhidmatan awam yang bekerja pada hari mengundi</p>
+           <p onclick="checkAnswer('question10', 'C')">C III. Pesalah yang menjalani hukuman penjara pada hari mengundi</p>
+           <p onclick="checkAnswer('question10', 'D')">D IV. Pesakit yang terlantar di hospital pada hari mengundi</p>
+        <p id="resultquestion10"></p> <!-- Added result element for question 10 -->
+    </div>
+
+    <div class="question" id="question11">
+        <p>11--Yang manakah alasan bagi sesuatu keputusan pilihan raya boleh dicabar di mahkamah? (STPM2013)</p>
+        <p>I. Perbuatan merasuah pengundi yang dilakukan oleh calon pilihan raya</p>
+        <p>II. Ketidakpatuhan calon terhadap peruntukan undang-undang pilihan raya</p>
+        <p>III. Calon gagal menurunkan poster dan bendera parti selepas hari mengundi</p>
+        <p>IV. Calon gagal menghantar penyata pilihan raya dalam tempoh yang ditetapkan.</p>
+        <p onclick="checkAnswer('question11', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question11', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question11', 'C')">C II dan IV</p>
+        <p onclick="checkAnswer('question11', 'D')">D I dan III</p>
+        <p id="resultquestion11"></p> <!-- Added result element for question 11 -->
+    </div>
+
+    <div class="question" id="question12">
+        <p>12--Yang Dipertua Dewan Rakyat telah menghantar notis kekosongan kerusi Dewan Rakyat bagi kawasan Parlimen X kepada Suruhanjaya Pilihan Raya.<br>Tindakan di atas diambil kerana wakil rakyat berkenaan (STPM2014)</p>
+           <p onclick="checkAnswer('question12', 'A')">A I. Dipilih sebagai Ahli Dewan Undangan Negeri dalam satu pilihan raya kecil</p>
+           <p onclick="checkAnswer('question12', 'B')">B II. Dikenakan tindakan disiplin oleh Jawatankuasa Hak dan Kebebasan Dewan</p>
+           <p onclick="checkAnswer('question12', 'C')">C III. Dibuktikan bersalah dalam prosiding yang berhubung dengan salah laku pilihan raya</p>
+           <p onclick="checkAnswer('question12', 'D')">D IV. Tidak menghadiri sidang dalam tempoh tiga bulan selepas sidang pertama Dewan Rakyat</p>
+        <p id="resultquestion12"></p> <!-- Added result element for question 12 -->
+    </div>
+
+    <div class="question" id="question13">
+        <p>13--Di bawah merupakan fungsi utama Suruhanjaya Pilihan Raya, kecuali</p>
+           <p onclick="checkAnswer('question13', 'A')">A I. Membuat kajian dan persempadanan semula</p>
+           <p onclick="checkAnswer('question13', 'B')">B II. Menjalankan urusan pendaftaran pemilih</p>
+           <p onclick="checkAnswer('question13', 'C')">C III. Menjalankan pilihan raya umum untuk Dewan Rakyat sahaja</p>
+        <p id="resultquestion13"></p> <!-- Added result element for question 13 -->
+    </div>
+
+    <div class="question" id="question14">
+        <p>14--Apakah kelayakan menjadi calon Pilihan Raya Dewan Undangan Negeri?</p>
+           <p onclick="checkAnswer('question14', 'A')">A I. Bukan warganegara Malaysia dan bermastautin</p>
+           <p onclick="checkAnswer('question14', 'B')">B II. Berumur tidak kurang daripada lapan belas (18) tahun</p>
+           <p onclick="checkAnswer('question14', 'C')">C III. Didapati atau disahkan sebagai orang sempurna tidak sempurna akal</p>
+        <p id="resultquestion14"></p> <!-- Added result element for question 14 -->
+    </div>
+
+    <div class="question" id="question15">
+        <p>15--Pernyataan yang manakah tepat mengenai Sistem Pilihan Raya?</p>
+           <p onclick="checkAnswer('question15', 'A')">A I. Suruhanjaya pilihan raya dianggotai oleh seorang Pengerusi , seorang Timbalan Pengerusi dan 1 orang ahli</p>
+           <p onclick="checkAnswer('question15', 'B')">B II. Seorang anggota Suruhanjaya Pilihan Raya memegang jawatan sehingga 55 tahun.</p>
+           <p onclick="checkAnswer('question15', 'C')">C III. YDPA boleh memecat jawatan mana - mana anggota</p>
+        <p id="resultquestion15"></p> <!-- Added result element for question  15-->
+    </div>
+
+    <div class="question" id="question16">
+        <p>16--Situasi yang manakah SALAH berkaitan seseorang akan hilang kelayakan pemilih?</p>
+           <p onclick="checkAnswer('question16', 'A')">A I. Telah didapati bersalah di bawah Akta Kesalahan Pilihan Raya 1954</p>
+           <p onclick="checkAnswer('question16', 'B')">B II. Sebelum tarikh kelayakan,telah didapati bersalah dan dihukum mati atau penjara untuk tempoh lebih 36 bulan</p>
+           <p onclick="checkAnswer('question16', 'C')">C III. Memperoleh kerakyatan asing</p>
+        <p id="resultquestion16"></p> <!-- Added result element for question 16 -->
+    </div>
+
+    <div class="question" id="question17">
+        <p>17--Pernyataan yang manakah tepat mengenai amalan demokrasi di Malaysia?</p>
+           <p onclick="checkAnswer('question17', 'A')">A I. Terdapat dua dewan dalam Parlimen Malaysia</p>
+           <p onclick="checkAnswer('question17', 'B')">B II. Hak mengundi dijamin kepada rakyat Malaysia yang berumur 17 tahun ke atas</p>
+           <p onclick="checkAnswer('question17', 'C')">C III. Dewan Undangan Negeri dibubarkan serentak dengan pembubaran Parlimen</p>
+        <p id="resultquestion17"></p> <!-- Added result element for question 17 -->
+    </div>
+
+    <div class="question" id="question18">
+        <p>18--Alasan yang manakah menyebabkan kemenangan seseorang calon dalam pilihan raya dibatalkan oleh mahkamah?</p>
+           <p onclick="checkAnswer('question18', 'A')">A I. Calon gagal menurunkan poster dan bendera parti selepas hari mengundi</p>
+           <p onclick="checkAnswer('question18', 'B')">B II. Calon mendapat taraf kewarganegaraan asing</p>
+           <p onclick="checkAnswer('question18', 'C')">C III. Calon menjalankan perniagaan dan menjadi pemilik beberapa buah syarikat</p>
+        <p id="resultquestion18"></p> <!-- Added result element for question 18 -->
+    </div>
+
+    <div class="question" id="question19">
+        <p>19--Pilih kenyataan Jenis Pilihan Raya yang SALAH</p>
+           <p onclick="checkAnswer('question19', 'A')">A I. Terdapat tiga jenis pilihan raya iaitu Pilihan Raya Umum, Pilihan Raya Kecil dan Pilihan Raya Negeri</p>
+           <p onclick="checkAnswer('question19', 'B')">B II. Pilihan raya kecil berlaku untuk mengisi kekosongan kerusi Parlimen atau DUN</p>
+           <p onclick="checkAnswer('question19', 'C')">C III. Pilihan Raya Umum diadakan apabila Parlimen atau DUN terbubar sendiri selepas tamat tempoh 5 tahun</p>
+        <p id="resultquestion19"></p> <!-- Added result element for question 19 -->
+    </div>
+
+    <div class="question" id="question20">
+        <p>20--Pilih kenyataan yang betul mengenai Pilihan Raya</p>
+           <p onclick="checkAnswer('question20', 'A')">A I. Seseorang pemilih itu mestilah mendaftar dengan Suruhanjaya Pilihan Raya sebelum mengundi</p>
+           <p onclick="checkAnswer('question20', 'B')">B II. Suruhanjaya Pilihan Raya dianggotai oleh seorang Pengerusi, Timbalan Pengerusi dan 2 orang ahli</p>
+           <p onclick="checkAnswer('question20', 'C')">C III. Seseorang pemilih akan hilang kelayakan jika dia mempunyai rekod kesalahan ringan</p>
+        <p id="resultquestion20"></p> <!-- Added result element for question 20 -->
+    </div>
+
+
+
+
+    <!-- Add more questions as needed -->
+
+</body>
+</html>
+
+
+
+    <!-- Question  --
+    <div class="question" id="question">
+        <p>--</p>
+           <p onclick="checkAnswer('question', 'A')">A I. </p>
+           <p onclick="checkAnswer('question', 'B')">B II. </p>
+           <p onclick="checkAnswer('question', 'C')">C III. </p>
+           <p onclick="checkAnswer('question', 'D')">D IV. </p>
+        <p id="resultquestion"></p> <!-- Added result element for question  -->
+    </div>
+
+<!----
+    <div class="question" id="question">
+        <p>--</p>
+        <p>I. </p>
+        <p>II. </p>
+        <p>III. </p>
+        <p>IV. </p>
+        <p onclick="checkAnswer('question', 'A')">A I dan II</p>
+        <p onclick="checkAnswer('question', 'B')">B III dan IV</p>
+        <p onclick="checkAnswer('question', 'C')">C I,II dan III</p>
+        <p onclick="checkAnswer('question', 'D')">D Semua di atas</p>
+        <p id="resultquestion"></p> <!-- Added result element for question  -->
+    </div>
+
+
+
+
+
+
+<LINK>https://quizizz.com/admin/quiz/64c48d3b2ab3100007c9eca3/pam-demokrasi-dan-pilihan-raya?fromSearch=true&source=null</LINK>
